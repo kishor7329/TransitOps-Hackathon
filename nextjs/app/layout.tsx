@@ -9,34 +9,34 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
     title: {
-        default: "TransitOps | Smart Transport Operations Platform",
+        default: "TransitOps — Smart Transport Operations Platform",
         template: "%s | TransitOps",
     },
     description:
-        "TransitOps is a role-based transport operations platform for fleet, driver, trip, maintenance, fuel, expense, and analytics workflows.",
+        "TransitOps is a modern smart transport operations platform designed for efficient and scalable transit management. Includes real-time tracking, route optimization, and analytics.",
     keywords: [
         "TransitOps",
-        "fleet management",
-        "transport operations",
-        "dispatch management",
-        "maintenance tracking",
-        "RBAC dashboard",
+        "smart transport",
+        "transit management",
+        "real-time tracking",
+        "route optimization",
+        "analytics",
     ],
     authors: [{ name: "TransitOps Hackathon Team" }],
     creator: "TransitOps Hackathon Team",
     publisher: "TransitOps Hackathon Team",
 
     openGraph: {
-        title: "TransitOps | Smart Transport Operations Platform",
+        title: "TransitOps — Smart Transport Operations Platform",
         description:
-            "A responsive operations workspace for vehicles, drivers, dispatch, maintenance, fuel, expenses, and analytics.",
-        siteName: "TransitOps",
+            "Launch faster with TransitOps, a modern smart transport operations platform featuring real-time tracking, route optimization, and analytics.",
+        siteName: "PrebuiltUI",
         type: "website",
     },
 
     twitter: {
         card: "summary_large_image",
-        title: "TransitOps | Smart Transport Operations Platform",
+        title: "TransitOps — Smart Transport Operations Platform",
         description:
             "Role-based fleet operations UI built for the TransitOps hackathon challenge.",
     },

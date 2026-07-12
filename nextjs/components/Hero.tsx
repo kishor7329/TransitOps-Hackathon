@@ -11,7 +11,7 @@ export default function Hero() {
         'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=50&h=50&fit=crop'
     ];
 
-    const mainImageUrl = 'https://images.unsplash.com/photo-1576267423445-b2e0074d68a4?q=80&w=1600&auto=format&fit=crop';
+    const mainImageUrl = '/hero image/hero-dashboard.png'; // Replace with your actual image path
 
     const galleryStripImages = [
         'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=100',
@@ -20,41 +20,34 @@ export default function Hero() {
     ];
 
     const trustedLogosText = [
-        'Startups',
-        'Scale-ups',
-        'Founders',
-        'Global teams',
-        'Creative brands'
-    ];
+    'Vehicle Registry',
+    'Driver Management',
+    'Trip Dispatch',
+    'Maintenance',
+    'Fuel Tracking',
+    'Expense Management',
+    'Analytics',
+    'RAG Assistant'
+];
 
     return (
         <>
-            <section id="home" className="relative z-10">
-                <div className="max-w-6xl mx-auto px-4 min-h-screen max-md:w-screen max-md:overflow-hidden pt-32 md:pt-26 flex items-center justify-center">
+            <section id="home" className="relative z-20 pt-8 md:pt-25">
+                <div className="max-w-6xl mx-auto px-4 min-h-screen max-md:w-screen max-md:overflow-hidden flex items-center justify-center">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
                         <div className="text-left">
-                            <motion.a href="https://prebuiltui.com/tailwind-templates?ref=pixel-forge" className="inline-flex items-center gap-3 pl-3 pr-4 py-1.5 rounded-full bg-white/10 mb-6 justify-start"
-                                initial={{ y: 60, opacity: 0 }}
-                                whileInView={{ y: 0, opacity: 1 }}
-                                viewport={{ once: true }}
-                                transition={{ type: "spring", stiffness: 250, damping: 70, mass: 1 }}
-                            >
-                                <div className="flex -space-x-2">
-                                    {trustedUserImages.map((src, i) => (
-                                        <img
-                                            key={i}
-                                            src={src}
-                                            alt={`Client ${i + 1}`}
-                                            className="size-6 rounded-full border border-black/50"
-                                            width={40}
-                                            height={40}
-                                        />
-                                    ))}
-                                </div>
-                                <span className="text-xs text-gray-200/90">
-                                    Trusted by brands & founders worldwide
-                                </span>
-                            </motion.a>
+                            <motion.div
+    className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 mb-6"
+    initial={{ y: 60, opacity: 0 }}
+    whileInView={{ y: 0, opacity: 1 }}
+    viewport={{ once: true }}
+    transition={{ type: "spring", stiffness: 250, damping: 70 }}
+>
+    <ZapIcon className="size-4 text-blue-400" />
+    <span className="text-sm text-blue-200">
+        Fleet Management • RAG-based AI Assistant • Real-Time Analytics
+    </span>
+</motion.div>
 
                             <motion.h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6 max-w-xl"
                                 initial={{ y: 60, opacity: 0 }}
@@ -62,23 +55,35 @@ export default function Hero() {
                                 viewport={{ once: true }}
                                 transition={{ type: "spring", stiffness: 250, damping: 70, mass: 1, delay: 0.1 }}
                             >
-                                We design & build <br />
-                                <span className="bg-clip-text text-transparent bg-linear-to-r from-indigo-300 to-indigo-400">
-                                    high-impact digital experiences
-                                </span>
+                                Manage Your Entire Fleet -
+                                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-cyan-300 to-emerald-300 pl-4">
+                                    From One Smart Platform
+                                  </span>
                             </motion.h1>
 
-                            <motion.p className="text-gray-300 max-w-lg mb-8"
-                                initial={{ y: 60, opacity: 0 }}
-                                whileInView={{ y: 0, opacity: 1 }}
-                                viewport={{ once: true }}
-                                transition={{ type: "spring", stiffness: 250, damping: 70, mass: 1, delay: 0.2 }}
-                            >
-                                A creative digital agency helping startups and businesses grow through
-                                thoughtful design, scalable development and performance-driven strategy.
-                            </motion.p>
+                            {/* 1. Core Platform Features Paragraph */}
+<motion.p 
+    className="text-gray-200 text-base sm:text-lg max-w-lg font-normal leading-relaxed"
+    initial={{ y: 60, opacity: 0 }}
+    whileInView={{ y: 0, opacity: 1 }}
+    viewport={{ once: true }}
+    transition={{ type: "spring", stiffness: 250, damping: 70, mass: 1, delay: 0.2 }}
+>
+    TransitOps centralizes vehicle management, driver operations, smart dispatching, maintenance scheduling, fuel tracking, operational expenses, and real-time analytics.
+</motion.p>
 
-                            <motion.div className="flex flex-col sm:flex-row items-center gap-4 mb-8"
+{/* 2. AI & RAG Subtext Paragraph (Notice the slightly longer delay so it animates in a step later) */}
+<motion.p 
+    className="text-gray-400 text-sm sm:text-base max-w-lg mt-4 mb-8 font-light leading-relaxed border-l-2 border-purple-500/40 pl-4"
+    initial={{ y: 60, opacity: 0 }}
+    whileInView={{ y: 0, opacity: 1 }}
+    viewport={{ once: true }}
+    transition={{ type: "spring", stiffness: 250, damping: 70, mass: 1, delay: 0.3 }}
+>
+    <span className="text-cyan-400 font-medium">Powered by AI (RAG):</span> Users can instantly retrieve fleet information, maintenance history, and operational insights using natural language.
+</motion.p>
+
+                            {/* <motion.div className="flex flex-col sm:flex-row items-center gap-4 mb-8"
                                 initial={{ y: 60, opacity: 0 }}
                                 whileInView={{ y: 0, opacity: 1 }}
                                 viewport={{ once: true }}
@@ -86,7 +91,7 @@ export default function Hero() {
                             >
                                 <Link href="/" className="w-full sm:w-auto">
                                     <PrimaryButton className="max-sm:w-full py-3 px-7">
-                                        Start your project
+                                        Launch Dashboard
                                         <ArrowRightIcon className="size-4" />
                                     </PrimaryButton>
                                 </Link>
@@ -95,7 +100,7 @@ export default function Hero() {
                                     <PlayIcon className="size-4" />
                                     View our work
                                 </GhostButton>
-                            </motion.div>
+                            </motion.div> */}
 
                             <motion.div className="flex sm:inline-flex overflow-hidden items-center max-sm:justify-center text-sm text-gray-200 bg-white/10 rounded"
                                 initial={{ y: 60, opacity: 0 }}
@@ -106,9 +111,9 @@ export default function Hero() {
                                 <div className="flex items-center gap-2 p-2 px-3 sm:px-6.5 hover:bg-white/3 transition-colors">
                                     <ZapIcon className="size-4 text-sky-500" />
                                     <div>
-                                        <div>Strategy-led execution</div>
+                                        <div>Fleet Monitoring</div>
                                         <div className="text-xs text-gray-400">
-                                            Focused on growth & results
+                                            Track vehicles, drivers and trips instantly
                                         </div>
                                     </div>
                                 </div>
@@ -118,9 +123,9 @@ export default function Hero() {
                                 <div className="flex items-center gap-2 p-2 px-3 sm:px-6.5 hover:bg-white/3 transition-colors">
                                     <CheckIcon className="size-4 text-cyan-500" />
                                     <div>
-                                        <div>Full-service delivery</div>
+                                        <div>AI Fleet Assistant</div>
                                         <div className="text-xs text-gray-400">
-                                            Design, dev & marketing
+                                            Ask questions. Get operational insights.
                                         </div>
                                     </div>
                                 </div>
@@ -142,20 +147,16 @@ export default function Hero() {
                                         className="w-full h-full object-cover object-center"
                                     />
 
-                                    <div className="absolute left-4 top-4 px-3 py-1 rounded-full bg-black/15 backdrop-blur-sm text-xs">
-                                        Branding • Web • Growth
-                                    </div>
-
                                     <div className="absolute right-4 bottom-4">
-                                        <button className="inline-flex items-center gap-2 rounded-full px-4 py-2 bg-white/6 backdrop-blur-sm hover:bg-white/10 transition focus:outline-none">
-                                            <PlayIcon className="size-4" />
-                                            <span className="text-xs">See case study</span>
+                                        <button className="">
+                                            {/* <PlayIcon className="size-4" /> */}
+                                            {/* <span className="text-xs">See case study</span> */}
                                         </button>
                                     </div>
                                 </div>
                             </motion.div>
 
-                            <div className="mt-4 flex gap-3 items-center justify-start">
+                            {/* <div className="mt-4 flex gap-3 items-center justify-start">
                                 {galleryStripImages.map((src, i) => (
                                     <motion.div
                                         key={i}
@@ -185,7 +186,7 @@ export default function Hero() {
                                     </div>
                                     20+ completed projects
                                 </motion.div>
-                            </div>
+                            </div> */}
                         </motion.div>
                     </div>
                 </div>
