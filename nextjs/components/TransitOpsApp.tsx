@@ -1,4 +1,5 @@
 "use client";
+import FleetAI from "@/components/FleetAI";
 
 import {
     AlertTriangle,
@@ -793,6 +794,7 @@ function LoginScreen({ onLogin }: { onLogin: (user: CurrentUser) => void }) {
                     </div>
                 </form>
             </section>
+            <FleetAI />
         </main>
     );
 }

@@ -1,6 +1,10 @@
 import { Outfit } from "next/font/google";
-import "./globals.css";
 import { Metadata } from "next";
+import "./globals.css";
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
+import LenisScroll from "@/components/lenis";
+import SoftBackdrop from "@/components/SoftBackdrop";
 
 const outfit = Outfit({
     variable: "--font-sans",
@@ -55,8 +59,14 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={outfit.variable}>
-                {children}
-            </body>
+    <div className="min-h-screen bg-[#0f172a] text-white">
+        <SoftBackdrop />
+        <LenisScroll />
+        <Navbar />
+        {children}
+        <Footer />
+    </div>
+</body>
         </html>
     );
 }
