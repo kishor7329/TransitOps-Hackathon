@@ -1,9 +1,5 @@
 import { Outfit } from "next/font/google";
 import "./globals.css";
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
-import SoftBackdrop from "@/components/SoftBackdrop";
-import LenisScroll from "@/components/lenis";
 import { Metadata } from "next";
 
 const outfit = Outfit({
@@ -13,39 +9,36 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
     title: {
-        default: "Pixel.io – Digital Agency Template | PrebuiltUI",
-        template: "%s | Pixel.io",
+        default: "TransitOps | Smart Transport Operations Platform",
+        template: "%s | TransitOps",
     },
     description:
-        "Pixel.io is a modern digital agency template by PrebuiltUI, built for startups and growing businesses. Includes discovery, UI/UX design, development, pricing plans, FAQs, and conversion-focused sections.",
+        "TransitOps is a role-based transport operations platform for fleet, driver, trip, maintenance, fuel, expense, and analytics workflows.",
     keywords: [
-        "Pixel.io",
-        "PrebuiltUI",
-        "digital agency template",
-        "Next.js agency website",
-        "UI UX agency",
-        "startup website template",
-        "web development services",
-        "design and development agency",
+        "TransitOps",
+        "fleet management",
+        "transport operations",
+        "dispatch management",
+        "maintenance tracking",
+        "RBAC dashboard",
     ],
-    authors: [{ name: "PrebuiltUI" }],
-    creator: "PrebuiltUI",
-    publisher: "PrebuiltUI",
+    authors: [{ name: "TransitOps Hackathon Team" }],
+    creator: "TransitOps Hackathon Team",
+    publisher: "TransitOps Hackathon Team",
 
     openGraph: {
-        title: "Pixel.io – Digital Agency Template by PrebuiltUI",
+        title: "TransitOps | Smart Transport Operations Platform",
         description:
-            "Launch faster with Pixel.io, a modern digital agency template featuring strategy, design, development, pricing plans, and FAQs.",
-        siteName: "PrebuiltUI",
+            "A responsive operations workspace for vehicles, drivers, dispatch, maintenance, fuel, expenses, and analytics.",
+        siteName: "TransitOps",
         type: "website",
     },
 
     twitter: {
         card: "summary_large_image",
-        title: "Pixel.io – Digital Agency Template",
+        title: "TransitOps | Smart Transport Operations Platform",
         description:
-            "A conversion-focused digital agency template built with Next.js. Perfect for startups, teams, and scalable brands.",
-        creator: "@prebuiltui",
+            "Role-based fleet operations UI built for the TransitOps hackathon challenge.",
     },
 
     robots: {
@@ -61,12 +54,8 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body>
-                <SoftBackdrop />
-                <LenisScroll />
-                <Navbar />
+            <body className={outfit.variable}>
                 {children}
-                <Footer />
             </body>
         </html>
     );
