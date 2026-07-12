@@ -10,12 +10,12 @@ export default function Features() {
             <div className="max-w-6xl mx-auto px-4">
 
                 <Title
-                    title="Services"
-                    heading="Everything your brand needs to grow"
-                    description="From strategy to execution, we help businesses build strong digital products and meaningful customer experiences."
+                    title="Role-Based Access Control"
+                    heading="Built for Every Stakeholder in Transport Operations"
+                    description="TransitOps provides dedicated dashboards and permissions for every role, ensuring secure access, streamlined workflows, and efficient fleet operations."
                 />
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     {featuresData.map((feature, i) => (
                         <motion.div
                             ref={(el) => {

@@ -1,21 +1,31 @@
-import { UploadIcon, VideoIcon, ZapIcon } from 'lucide-react';
+import {
+    TruckIcon,
+    RouteIcon,
+    ShieldCheckIcon,
+    BarChart3Icon
+} from "lucide-react";
 
 export const featuresData = [
-    {
-        icon: <UploadIcon className="w-6 h-6" />,
-        title: 'Discovery & Planning',
-        desc: 'We understand your goals, audience and challenges to craft a clear, actionable strategy.'
-    },
-    {
-        icon: <ZapIcon className="w-6 h-6" />,
-        title: 'Design & Development',
-        desc: 'High-quality design and scalable development focused on performance and usability.'
-    },
-    {
-        icon: <VideoIcon className="w-6 h-6" />,
-        title: 'Launch & Growth',
-        desc: 'We launch, optimize and continuously improve to drive measurable business growth.'
-    }
+  {
+    icon: <TruckIcon className="size-6 text-cyan-400" />,
+    title: "Fleet Manager",
+    desc: "Manage vehicle lifecycles, maintenance schedules, fleet availability, and operational efficiency from a centralized dashboard."
+  },
+  {
+    icon: <RouteIcon className="size-6 text-cyan-400" />,
+    title: "Dispatcher",
+    desc: "Create trips, assign available vehicles and drivers, and ensure every dispatch follows business rules automatically."
+  },
+  {
+    icon: <ShieldCheckIcon className="size-6 text-cyan-400" />,
+    title: "Safety Officer",
+    desc: "Monitor driver licenses, compliance status, safety scores, and prevent unauthorized trip assignments."
+  },
+  {
+    icon: <BarChart3Icon className="size-6 text-cyan-400" />,
+    title: "Financial Analyst",
+    desc: "Track fuel consumption, maintenance costs, operational expenses, and fleet profitability through real-time analytics."
+  }
 ];
 
 export const plansData = [
